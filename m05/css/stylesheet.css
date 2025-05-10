@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Wellfleet);
+@import url(https://javascriptbook.com/code/c04/images/bullseye-logo.png);
 
 body {
 	background-color: #523620;
@@ -8,7 +9,7 @@ body {
 	margin: 0px 0px 0px 0px;}
 
 h1 {
-	background-image: url('../images/bullseye-logo.png');
+	background-image: url(https://javascriptbook.com/code/c04/images/bullseye-logo.png);
 	background-repeat: no-repeat;
 	text-indent: 100%;
 	white-space: nowrap;

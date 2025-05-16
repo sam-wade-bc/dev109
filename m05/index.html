@@ -5,30 +5,59 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
-<body>
-
 <section id="page2">
 
 <h1>Bullseye</h1>
 
 <img src="images/teacher.png" id="teacher2" alt="">
 <div id="blackboard"></div>
+
 </section>
-<h4> Solve the next one? 11 x 5 = __ <button onclick="myFunction()">Try Me!</button></h4>
 
 <script>
-function myFunction() {
-  let mathanswer = prompt("What is 11 X 5?", "answer here");
-  if (mathanswer == 55) {
-   alert(
-    "Good job, you got it!" + mathanswer);
-  }
-  else{
-alert (mathanswer + "? not quite, try again!");
-}
+   
+      
+      
+      var table = prompt("Enter a number to display its multiplication table:");
+      var i = 1;
+      var msg = '<h2>Multiplication Table</h2>';
+      table = parseInt(table);
+      
+      
+      if (isNaN(table) || table === null) {
+        table = 0;
+      }
 
-}
+      
+      while (i <= 10) {
+        msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
+        i++;
+      }
+
+      // Write the message into the page
+      var el = document.getElementById('blackboard');
+      el.innerHTML = msg;
+
+      // Unused script
+      /*
+      var operator = 'addition'; // Type of calculation
+      var i = 1;                 // Set counter to 1
+      var msg = '';              // Message
+
+      if (operator === 'addition') {
+        // Do addition
+        while (i < 11) {
+          msg += i + ' + ' + table + ' = ' + (i + table) + '<br />';
+          i++;
+        }
+      } else {
+        // Do multiplication
+        while (i < 11) {
+          msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
+          i++;
+        }
+      }
+      */
 </script>
-    <script src="js/example.js"></script>
-  </body>
+</body>
 </html>

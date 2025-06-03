@@ -6,44 +6,56 @@
   <title>A04 - Contact Us</title>
   <link rel="stylesheet" href="css/a04Styles.css">
 </head>
-</head>
 <body>
   <h1>CONTACT US</h1>
   <h3>We promise we wont steal all your information!</h3>
 
-<form action="https://sam-wade-bc.github.io/dev109/a4/thankyou.html" id="myform" onsubmit="return validateForm();">
+<form action="" id="myform" onsubmit="return validateForm();">
   <p>
       <label for='FirstName'>First Name:</label>
       <input type="text" id="FirstName" name="FirstName" />
   </p>
+  <div class = "error" id="firstNameInvalidDiv"></div>
+  
   <p>
       <label for='LastName'>Last Name:</label>
       <input type="text" id="LastName" name="LastName" />
   </p>
+  <div class="error" id="lastNameInvalidDiv"></div>
+  
   <p>
       <label for='EMail'>EMail:</label>
       <input type="text" id="EMail" name="EMail" />
   </p>
+  <div class="error" id="emailInvalidDiv"></div>
+  
   <p>
       <label for='Phone'>Phone:</label>
       <input type="text" id="Phone" name="Phone" />
   </p>
+  <div class="error" id="phoneInvalidDiv"></div>
+  
   <p>
       <label for='Username'>Username:</label>
       <input type="text" id="Username" name="Username" />
   </p>
+  <div id="usernameInvalidDiv"></div>
+  
   <p>
       <label for='Password'>Password:</label>
       <input type="text" id="Password" name="Password" />
   </p>
+  <div class="error" id="passwordInvalidDiv"></div>
+  
   <p>
       <label for='Address'>Address:</label>
       <textarea cols="20" rows="5" id="Address" name="Address"></textarea>
   </p>
-
+  <div class="error" id="addressInvalidDiv"></div>
+  
   <p>
-    <label for='State'>State:</label>
-     <select id="State" name="State">
+     <label for='State'>State:</label>
+      <select id="State" name="State">
         <option value="000" selected="selected">[choose yours]</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
@@ -98,6 +110,13 @@
         <option value="DC">Washington, D.C.</option>
     </select>
   </p>
+  <div class="error" id="stateInvalidDiv"></div>
+  
+  <p>
+      <label for='ZipCode'>City:</label>
+      <input type="text" id="City" name="City" />
+  </p>
+  <div class="error" id="cityInvalidDiv"></div>
 
   <p>
       <label for='Country'>Country:</label>
@@ -115,19 +134,22 @@
           <option value="032">Argentina</option>
           <option value="051">Armenia</option>
           <option value="533">Aruba</option>
-
       </select>
   </p>
+  <div class="error" id="countryInvalidDiv"></div>
+
   <p>
       <label for='ZipCode'>Zip Code:</label>
       <input type="text" id="ZipCode" name="ZipCode" />
   </p>
+  <div class="error" id="zipCodeInvalidDiv"></div>
+  
   <p>
       <label for='Comments'>Comments:</label>
       <input type="text" id="Comments:" name="Comments:" />
   </p>
   </p>
-  <p> <div id="errorMessages"></div></p>
+  <p> <div id="invalidDiv"></div></p>
   <p>
       <input type="submit" name="submit" value="Submit">
   </p>

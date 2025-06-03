@@ -1,3 +1,4 @@
+
 function validateForm() {
     
 // Set validity variable to start
@@ -47,26 +48,26 @@ var zipCodeInvalidDiv = document.getElementById("zipCodeInvalidDiv");
 
 //Validate first name
     if (firstName === "" || firstName.length > 20) {
-        firstNameInvalidDiv.innerHTML += "<p>Please enter your First Name (max length: 20).</p>";
+        firstNameInvalidDiv.innerHTML += "<p>Please enter your first name (max length: 20).</p>";
         isValid = false;
     }
 
 //Validate Last Name
     if (lastName === "" || lastName.length > 20) {
-        lastNameInvalidDiv.innerHTML += "<p>Please enter your Last Name (max length: 20).</p>";
+        lastNameInvalidDiv.innerHTML += "<p>Please enter your last name (max length: 20).</p>";
         isValid = false;
     }
 
 //Establish email regular expression then validate
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === "" || !emailRegex.test(email)) {
-        emailInvalidDiv.innerHTML += "<p>Please enter a valid Email address.</p>";
+        emailInvalidDiv.innerHTML += "<p>Please enter a valid email address.</p>";
         isValid = false;
     }
 //Establish phone regular expression then validate
     var phoneRegex = /^[0-9]+$/;
-    if (phone === "" || !phoneRegex.test(phone)) {
-        phoneInvalidDiv.innerHTML = "<p>Please enter a valid Phone number (numeric only).</p>";
+    if (isNaN(phone) || phone.lenght >15 || phone===null || phone===""||!phoneRegex.test(phone)) {
+        phoneInvalidDiv.innerHTML = "<p>Please enter a valid phone number (numeric only).</p>";
         isValid = false;
     }
 
@@ -103,6 +104,11 @@ if (city === ""||city.length>15){
     if (country==="001" && state === "000"){
        stateInvalidDiv.innerHTML = "<p>Please Select a State</P>";
        isValid = false;
+    }
+    if (state==="000" && country==="000"){
+       stateInvalidDiv.innerHTML = "<p>Please Select a State and Country</P>";
+       isValid = false;
+      
     }
 
 //Validate country

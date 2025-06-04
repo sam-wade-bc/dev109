@@ -1,7 +1,13 @@
-function validateForm() {
+
+function validateForm(event) {
+
+//Preventing the action to go before the validation can be sent. 
+if (event) {
+event.preventDefault();
+}
     
 // Set validity variable to start
-var isValid = true;
+    var isValid = false;
 
 // establish each validation ids
 var invalidDiv = document.getElementById("invalidDiv");
@@ -150,11 +156,10 @@ if (city === ""||city.length>15){
     if (!isValid) {
         invalidDiv.innerHTML = "<p>Please correct the above errors before submitting again</p>";
     } else {
-        // Redirect to thank you page
-        document.getElementById("myForm").action = "https://sam-wade-bc.github.io/dev109/a4/thankyou.html";
+        // If valid, submit the form by setting the action and allowing submission
+        document.getElementById("myform").action = "https://sam-wade-bc.github.io/dev109/a4/thankyou.html";
+        document.getElementById("myform").submit();
     }
-
 //Finaly return validity status to form. 
     return isValid;
-}
 }

@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+  *{
+   font-family: "Lexend", sans-serif;
+  }
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
 }
 
 h1  {
-    text-align: center;
-    text-decoration:underline;    
+    text-align: center;    
 }
 
 h3  {

@@ -156,8 +156,7 @@ if (city === ""||city.length>15){
     if (!isValid) {
         invalidDiv.innerHTML = "<p>Please correct the above errors before submitting again</p>";
         return false;
-    } else {
-//Finaly return validity status to form.
-      return true;
-    }    
+    }
+//Finaly return true if valid
+      return true;   
 }

@@ -1,3 +1,4 @@
+
 function validateForm(event) {
 
 //Preventing the action to go before the validation can be sent. 
@@ -6,7 +7,7 @@ event.preventDefault();
 }
     
 // Set validity variable to start
-    var isValid = true;
+var isValid = true;
 
 // establish each validation ids
 var invalidDiv = document.getElementById("invalidDiv");
@@ -36,7 +37,7 @@ stateInvalidDiv.innerHTML = "";
 zipCodeInvalidDiv.innerHTML = "";
     
 
-// Establish variables to validate
+// Establish variables to validate from form submit
 var firstName = document.getElementById("FirstName").value.trim();
 var lastName = document.getElementById("LastName").value.trim();
 var email = document.getElementById("Email").value.trim();
@@ -140,25 +141,23 @@ if (city === ""||city.length>15){
     }
 
 //Validate country
-    if (country === "000") {
+    if (country.value === "000") {
         countryInvalidDiv.innerHTML = "<p>Please select a valid Country</p>";
         isValid = false;
     }
 //Establish zip code regular exression then validate 
     var zipRegex = /^\d{5}$/;
     if (zipCode===""||!zipRegex.test(zipCode)){
-       zipCodeInvalidDiv.innerHTML = "<p>Please enter a valid zip code. (Max length: 5)</p>";
+       zipCodeInvalidDiv.innerHTML = "<p>Please enter a valid 5 digit zip code.</p>";
        isValid = false;  
     }
   
 //Set error if the form is invalidated in any way and set action.
     if (!isValid) {
         invalidDiv.innerHTML = "<p>Please correct the above errors before submitting again</p>";
+        return false;
     } else {
-        // If valid, submit the form by setting the action and allowing submission
-        document.getElementById("myform").action = "https://sam-wade-bc.github.io/dev109/a4/thankyou.html";
-        document.getElementById("myform").submit();
-    }
-//Finaly return validity status to form. 
-    return isValid;
+//Finaly return validity status to form.
+      return true;
+    }    
 }

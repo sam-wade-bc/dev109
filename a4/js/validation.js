@@ -1,11 +1,5 @@
-
 function validateForm(event) {
-
-//Preventing the action to go before the validation can be sent. 
-if (event) {
-event.preventDefault();
-}
-    
+   
 // Set validity variable to start
 var isValid = true;
 
@@ -155,6 +149,7 @@ if (city === ""||city.length>15){
 //Set error if the form is invalidated in any way and set action.
     if (!isValid) {
         invalidDiv.innerHTML = "<p>Please correct the above errors before submitting again</p>";
+        event.preventDefault();
         return false;
     }
 //Finaly return true if valid

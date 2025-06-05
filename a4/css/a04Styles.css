@@ -63,3 +63,8 @@ input[type="submit"]:hover {
     font-weight: bold;
     margin-top: 10px;
 }
+
+a{
+text-align:center;
+font-weight: bold;
+}

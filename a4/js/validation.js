@@ -6,7 +6,7 @@ event.preventDefault();
 }
     
 // Set validity variable to start
-    var isValid = false;
+    var isValid = true;
 
 // establish each validation ids
 var invalidDiv = document.getElementById("invalidDiv");

@@ -1,4 +1,3 @@
-
 function validateForm(event) {
 
 //Preventing the action to go before the validation can be sent. 
@@ -53,20 +52,20 @@ var zipCode = document.getElementById("ZipCode").value.trim();
 
 //Validate first name
     if (firstName === "" || firstName.length > 20) {
-        firstNameInvalidDiv.innerHTML += "<p>Please enter your first name (max length: 20)</p>";
+        firstNameInvalidDiv.innerHTML = "<p>Please enter your first name (max length: 20)</p>";
         isValid = false;
     }
 
 //Validate Last Name
     if (lastName === "" || lastName.length > 20) {
-        lastNameInvalidDiv.innerHTML += "<p>Please enter your last name (max length: 20)</p>";
+        lastNameInvalidDiv.innerHTML = "<p>Please enter your last name (max length: 20)</p>";
         isValid = false;
     }
 
 //Establish email regular expression then validate
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === "" || !emailRegex.test(email)) {
-        emailInvalidDiv.innerHTML += "<p>Please enter a valid email address</p>";
+        emailInvalidDiv.innerHTML = "<p>Please enter a valid email address</p>";
         isValid = false;
     }
 //Establish phone regular expression then validate

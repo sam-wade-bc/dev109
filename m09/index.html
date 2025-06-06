@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>M09 - Grocery List</title>
-<link rel="stylesheet" href="css/m09.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M09-Grovery List</title>
+  <link rel="stylesheet" href="css/m09.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
- <body>
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
     
-   <div id="page">
-      
-     <h1 id="header">List</h1>
-      
-     <h2>Buy groceries</h2>
-      
-     <ul id="todo">
-        <li id="one" class="hot"><em>fresh</em> figs</li>
-        <li id="two" class="hot">pine nuts</li>
-        <li id="three" class="hot">honey</li>
-        <li id="four">balsamic vinegar</li>
-        <li>quinoa</li>
-      </ul>
+    <ul id="todo">
+      <li id="one" class="hot"><em>fresh</em> figs</li>
+      <li id="two" class="hot">pine nuts</li>
+      <li id="three" class="hot">honey</li>
+      <li id="four">balsamic vinegar</li>
+      <li class="cool">quinoa</li>
+    </ul>
 
-     <form onsubmit="addItem()">
-       <input type="text"></input> 
-     <input type="submit" value="Add Item to List"></input>
-</form>
-</div>
-    <script src="js/addItem.js"></script>
-
+    <p id="user-input-area"> 
+      <input type="text" id="itemInput" placeholder="Enter new item...">
+      <button onclick="addItem()">Add Item</button>
+    </p>    
+    
+    <div id="error-message"></div>
+  </div>
+  
+  <script src="js/addItem.js"></script>
 </body>
 </html>

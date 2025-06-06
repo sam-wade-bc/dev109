@@ -1,27 +1,47 @@
-function addItem(){
+function addItem() {
+//1. Add variable to track erros
+  var errorOccurred = false;
 
-var newEl = document.createElement('li');
-var list = document.getElementsBy
-// Create a text node and store it in a variable.
-var newText = document.createTextNode('quinoa');
+//2. Get the div where error messages will be displayed.
+  var errorDiv = document.getElementById('error-message');
+//3. Clear any previous error message before we begin.
+  errorDiv.textContent = '';
 
-// Attach the new text node to the new element.
-newEl.appendChild(newText);
+  try {
+//4. Get the user input element and its value.
+    var inputElement = document.getElementById('itemInput');
+    var newItemText = inputElement.value;
 
-// Find the position where the new element should be added.
-var position = document.getElementsByTagName('ul')[0];
+//5. Validate the input. If it's empty, throw an error.
 
-// Insert the new element into its position.
-position.appendChild(newEl);
+    if (newItemText === "") {
+      throw new Error("Input field cannot be empty.");
+    }
 
-//try adding item to list
-try(newEl)
-  
-//Catch error or null and print to console
+//6. Create a new <li> element.
+    var newEl = document.createElement('li');
 
+//7. Create a text node with the user's input and puts it in the list item.
+    var newText = document.createTextNode(newItemText);
+    newEl.appendChild(newText);
 
-//Finally return to top
+//8. Find the <ul> list and append the new <li> to it.
+    var position = document.getElementById('todo'); // Using getElementById is more reliable
+    position.appendChild(newEl);
 
+  } catch (e) {
+//9. set error indicator and print this to the log.     
+    errorOccurred = true;
+    console.log(e);
 
+  } finally {
+//10. Check our indicator if we need to display an error message.
+    if (errorOccurred) {
+      errorDiv.textContent = 'Please add an item.';
+    }
 
+//11. EXTRA CREDIT HERE: Clear input and refocus for next input
+    document.getElementById('itemInput').value = '';
+    document.getElementById('itemInput').focus();
+  }
 }

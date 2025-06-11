@@ -1,0 +1,22 @@
+  body {
+    height: 200px;
+    background: beige;
+    }
+
+  .dot {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none; /* Prevent dots from interfering with clicks */
+    }
+
+    #controls {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 10px;
+      border: 1px solid black;
+      z-index: 1000;
+      text-align: center; /* Center text inside the controls */
+    }

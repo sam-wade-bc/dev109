@@ -18,7 +18,7 @@ body {
   margin: 0 auto;  
 }
 
-#timer{
+#timer, .input{
   text-align:left;
   color:#000;
   margin-bottom:1rem;
@@ -28,7 +28,7 @@ h1{
   text-align:center;
 }
 
-#caption .buttons, .input{
+#caption .buttons{
   max-width: 1000px;
   position: relative;
   justify-content:center;
@@ -36,11 +36,7 @@ h1{
 }
 #caption{
   background:lightgray;
-line-height:3;
-}
-
-.buttons{
- justify-content:space-between;
+  line-height:3;
 }
 
 #slideshow {

@@ -1,57 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>A5-Courousel</title>
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <script href="js/carousel.js"></script>
+<meta charset="utf-8">
+ <title>A5 - Carousel</title>
 </head>
-
 <body>
+  <div class="container">
+    <h1>GATO SLIDESHOW</h1> 
 
-<div id="timer"></div>
+    <br>
 
-<div class="slideshow-container">
+    <div id="timer">Automatic Slides Paused</div> 
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 5</div>
-  <img src="img/pic1.jpg" alt="Cat with a Sword">  
-</div>
-<div class="text">This cat has a sword.</div>
+    <a>
+      <img id="slideshow" src="https://sam-wade-bc.github.io/dev109/a5/img/pic1.jpg" 
+           alt="Cat with a sword">
+    </a>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 5</div>
-  <img src="img/pic2.jpg" alt="Cat with Heterochromia">
-    <div class="text">This cat has Heterochromia.</div>
-</div>
+    <br>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
-  <img src="img/pic3.jpg" alt="Cat on grass next to a flower">
-  <div class="text">This cat is going on an adventure!</div>
-</div>
+    <p id="caption">Gato Fight: This cat has a sword, how menacing!</p> 
 
-<div class="mySlides fade">
-  <div class="numbertext">4 / 5</div>
-  <img src="img/pic4.jpg" alt="Cat laying on stairs">
-  <div class="text">This cat is waiting for you to come upstairs.</div>
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">5 / 5</div>
-  <img src="img/pic5.jpg" alt="Cat standing on a ledge">
-  <div class="text">This cat is very suspicious looking.</div>
-</div>   
+    <div class="buttons">
+      <button id="previous">PREVIOUS</button>
+      <button id="next">NEXT</button> 
+    </div>
 
-</div>
+    <div class="input">
+      <input id="auto" type="checkbox">Run automatically
+    </div>
+<p id="validator">
+<a href="http://validator.w3.org/check?uri=referer" target="_blank">
+<img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5" title="HTML5"></a></p>
 
-<br>
-
-<div class="progress">
-  <a class="prev" onclick="progressPic(-1)">❮</a>
-  <a class="next" onclick="progressPic(1)">❯</a> 
-</div>
-
+  </div>
 </body>
 </html>
